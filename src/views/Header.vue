@@ -1,7 +1,6 @@
 <template>
   <div>
-    <v-app-bar app color="#BFA2DB" dark>
-      <v-toolbar-title>Emiri's Portfolio</v-toolbar-title>
+    <v-app-bar app flat>
       <v-spacer></v-spacer>
       <v-btn icon @click="goToLinkedIn">
         <v-icon>mdi-linkedin</v-icon>
