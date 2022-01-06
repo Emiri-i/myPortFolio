@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar app flat>
+    <v-app-bar app flat hide-on-scroll>
       <v-spacer></v-spacer>
       <v-btn icon @click="goToLinkedIn">
         <v-icon>mdi-linkedin</v-icon>
