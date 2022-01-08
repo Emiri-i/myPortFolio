@@ -139,6 +139,7 @@ export default class Home extends Vue {
   }
 }
 
+//transition effect in Hello
 .greeting-wrapper.-visible span {
   transform: translate(0, 0);
 }
