@@ -26,6 +26,38 @@
         </div>
       </v-col>
     </v-row>
+    <v-container>
+      <v-row class="d-flex justify-center align-center mt-10 pt-10">
+        <v-col
+          cols="12"
+          sm="8"
+          v-for="card in cards"
+          :key="card.Id"
+          class="mt-10"
+        >
+          <v-card
+            hover
+            style="height: 200px; width: 100%"
+            @mouseover="onMouseOverCard(card.Id)"
+            @mouseleave="onMouseLeaveCard(card.Id)"
+          >
+            <div
+              :class="`each-pages d-flex align-center  justify-center ${card.class}`"
+            >
+              <v-fade-transition>
+                <div
+                  v-if="card.isShow === true"
+                  class="card-name"
+                  style="font-family: cursive; font-size: 3.5em"
+                >
+                  {{ card.name }}
+                </div>
+              </v-fade-transition>
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -36,6 +68,30 @@ import { Component, Vue } from "vue-property-decorator";
 })
 export default class Home extends Vue {
   timeOut: number = 2000;
+  cards: any[] = [
+    // { Id: 1, name: "Home" ,src:"@/libs/woman-g8612c7b0e_640.jpg"},
+    {
+      Id: 1,
+      name: "About Me",
+      src: "/img/woman-g8612c7b0e_640.jpg",
+      class: "about-me",
+      isShow: false,
+    },
+    {
+      Id: 2,
+      name: "Skills",
+      src: "/img/code-g182e5b0cb_640.jpg",
+      class: "skills",
+      isShow: false,
+    },
+    {
+      Id: 3,
+      name: "Projects",
+      src: "/img/phone-g44ec08d6e_640.jpg",
+      class: "projects",
+      isShow: false,
+    },
+  ];
 
   created() {
     this.$nextTick(() => {
@@ -100,5 +156,54 @@ export default class Home extends Vue {
 }
 .greeting-wrapper span:nth-child(6) {
   transition-delay: 0.3s;
+}
+
+// each card items css
+.each-pages {
+  position: relative;
+  cursor: pointer;
+  opacity: 0.7;
+  height: 100%;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+
+  .card-name {
+    color: #f3f1f5;
+    z-index: 2;
+  }
+}
+
+.about-me {
+  background: url("/img/woman-g8612c7b0e_640.jpg") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: left top;
+}
+
+.skills {
+  background: url("/img/code-g182e5b0cb_640.jpg") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.projects {
+  background: url("/img/phone-g44ec08d6e_640.jpg") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 </style>
