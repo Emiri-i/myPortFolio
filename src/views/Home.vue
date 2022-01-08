@@ -133,13 +133,14 @@ export default class Home extends Vue {
 </script>
 
 <style lang="scss">
+//home title
 .home-bg {
   position: relative;
   background: url("../libs/home-office-gefbc799d0_1920.jpg") no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  opacity: 0.75;
-  padding: 80px 0;
+  opacity: 0.7;
+  padding: 170px 0;
 }
 .greeting-wrapper {
   display: flex;
