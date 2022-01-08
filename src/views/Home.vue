@@ -33,7 +33,7 @@
           sm="8"
           v-for="card in cards"
           :key="card.Id"
-          class="mt-10"
+          class="my-10"
         >
           <v-card
             hover
