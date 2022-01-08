@@ -111,6 +111,24 @@ export default class Home extends Vue {
       target.classList.remove(CLASSNAME);
     }, this.timeOut);
   }
+
+  onMouseOverCard(Id: number) {
+    for (let c of this.cards) {
+      if (c.Id === Id) {
+        c.isShow = true;
+        break;
+      }
+    }
+  }
+
+  onMouseLeaveCard(Id: number) {
+    for (let c of this.cards) {
+      if (c.Id === Id) {
+        c.isShow = false;
+        break;
+      }
+    }
+  }
 }
 </script>
 
