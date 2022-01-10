@@ -111,9 +111,9 @@ export default class Home extends Vue {
     this.$nextTick(() => {
       this.setGreetingAnimation();
 
-      setInterval(() => {
-        this.setGreetingAnimation();
-      }, this.timeOut * 2);
+      // setInterval(() => {
+      //   this.setGreetingAnimation();
+      // }, this.timeOut * 2);
     });
   }
 
