@@ -37,19 +37,20 @@
       </v-col>
     </v-row>
     <v-container>
-      <v-row class="d-flex justify-center align-center mt-10 pt-10">
+      <v-row class="d-flex justify-center align-center my-10">
         <v-col
           cols="12"
-          sm="8"
+          md="4"
           v-for="card in cards"
           :key="card.Id"
-          class="my-10"
+          class="mt-10"
         >
           <v-card
             hover
             style="height: 200px; width: 100%"
             @mouseover="onMouseOverCard(card.Id)"
             @mouseleave="onMouseLeaveCard(card.Id)"
+            @click="goToLink(card.link)"
           >
             <div
               :class="`each-pages d-flex align-center  justify-center ${card.class}`"
@@ -79,37 +80,32 @@ import { Component, Vue } from "vue-property-decorator";
 export default class Home extends Vue {
   timeOut: number = 2000;
   cards: any[] = [
-    // { Id: 1, name: "Home" ,src:"@/libs/woman-g8612c7b0e_640.jpg"},
     {
       Id: 1,
       name: "About Me",
-      src: "/img/woman-g8612c7b0e_640.jpg",
       class: "about-me",
       isShow: false,
+      link: "/aboutMe",
     },
     {
       Id: 2,
       name: "Skills",
-      src: "/img/code-g182e5b0cb_640.jpg",
       class: "skills",
       isShow: false,
+      link: "/skills",
     },
     {
       Id: 3,
       name: "Projects",
-      src: "/img/phone-g44ec08d6e_640.jpg",
       class: "projects",
       isShow: false,
+      link: "/projects",
     },
   ];
 
   created() {
     this.$nextTick(() => {
       this.setGreetingAnimation();
-
-      setInterval(() => {
-        this.setGreetingAnimation();
-      }, this.timeOut * 2);
     });
   }
 
@@ -138,6 +134,10 @@ export default class Home extends Vue {
         break;
       }
     }
+  }
+
+  goToLink(link: string) {
+    this.$router.push(link);
   }
 }
 </script>
