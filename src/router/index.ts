@@ -2,8 +2,8 @@ import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
 import AboutMe from "../views/AboutMe.vue";
-import Skills from "../views/AboutMe.vue";
-import projects from "../views/AboutMe.vue";
+import Skills from "../views/Skills.vue";
+import projects from "../views/Projects.vue";
 
 Vue.use(VueRouter);
 

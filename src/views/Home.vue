@@ -37,13 +37,13 @@
       </v-col>
     </v-row>
     <v-container>
-      <v-row class="d-flex justify-center align-center mt-10 pt-10">
+      <v-row class="d-flex justify-center align-center my-10">
         <v-col
           cols="12"
-          sm="8"
+          md="4"
           v-for="card in cards"
           :key="card.Id"
-          class="my-10"
+          class="mt-10"
         >
           <v-card
             hover
