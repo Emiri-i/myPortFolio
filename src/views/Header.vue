@@ -56,9 +56,6 @@ export default class Header extends Vue {
 </script>
 
 <style lang="scss">
-.v-main {
-  background-color: #f4f3f3;
-}
 .header-active {
   background-color: #f0d9ff;
   > .v-list-item__title,
