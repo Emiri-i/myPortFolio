@@ -80,11 +80,9 @@ import { Component, Vue } from "vue-property-decorator";
 export default class Home extends Vue {
   timeOut: number = 2000;
   cards: any[] = [
-    // { Id: 1, name: "Home" ,src:"@/libs/woman-g8612c7b0e_640.jpg"},
     {
       Id: 1,
       name: "About Me",
-      src: "/img/woman-g8612c7b0e_640.jpg",
       class: "about-me",
       isShow: false,
       link: "/aboutMe",
@@ -92,7 +90,6 @@ export default class Home extends Vue {
     {
       Id: 2,
       name: "Skills",
-      src: "/img/code-g182e5b0cb_640.jpg",
       class: "skills",
       isShow: false,
       link: "/skills",
@@ -100,7 +97,6 @@ export default class Home extends Vue {
     {
       Id: 3,
       name: "Projects",
-      src: "/img/phone-g44ec08d6e_640.jpg",
       class: "projects",
       isShow: false,
       link: "/projects",
@@ -110,10 +106,6 @@ export default class Home extends Vue {
   created() {
     this.$nextTick(() => {
       this.setGreetingAnimation();
-
-      // setInterval(() => {
-      //   this.setGreetingAnimation();
-      // }, this.timeOut * 2);
     });
   }
 
