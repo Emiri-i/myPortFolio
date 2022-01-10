@@ -28,6 +28,10 @@ const routes: Array<RouteConfig> = [
     name: "projects",
     component: projects,
   },
+  {
+    path: "*",
+    redirect: "/",
+  },
   // {
   // path: '/about',
   // name: 'About',

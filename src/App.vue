@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <Header></Header>
+    <Header :current-page-info="currentPageInfo"></Header>
     <v-main>
-      <router-view />
+      <router-view @send="currentPageInfo = $event" />
     </v-main>
   </v-app>
 </template>
@@ -18,7 +18,15 @@ import Header from "./views/Header.vue";
     Header,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  currentPageInfo: any = {};
+
+  // sendCurrentPageInfo(value: any) {
+  //   console.log("router", this.$router);
+  //   this.$router.push(value.link);
+  //   this.currentPageInfo = value;
+  // }
+}
 </script>
 
 <style lang="scss">
