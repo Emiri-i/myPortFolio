@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar app flat hide-on-scroll>
+    <v-app-bar app flat hide-on-scroll color="#f4f3f3">
       <v-spacer></v-spacer>
       <v-btn icon @click="goToLinkedIn">
         <v-icon>mdi-linkedin</v-icon>
@@ -8,7 +8,13 @@
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" absolute temporary right>
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+      right
+      color="#f4f3f3"
+    >
       <v-list nav dense>
         <v-list-item-group
           v-model="navBarGroup"
