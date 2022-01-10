@@ -12,14 +12,24 @@
             <span>!</span>
           </div>
           <div
-            style="font-family: Courier New; font-size: 3.25em; color: #f3f1f5"
-            class="d-flex justify-center mt-0"
+            style="
+              font-family: Courier New;
+              font-size: 3em;
+              color: #f3f1f5;
+              text-shadow: 1.5px 1.5px #808080;
+            "
+            class="d-flex justify-center mt-5"
           >
             I am Emiri.
           </div>
           <div
-            class="d-flex justify-center mt-0"
-            style="color: #f3f1f5; font-size: 1.25em"
+            class="d-flex justify-center mt-3"
+            style="
+              font-family: Courier New;
+              color: #f3f1f5;
+              font-size: 1.25em;
+              text-shadow: 1.5px 1.5px #808080;
+            "
           >
             Frontend-developer
           </div>
@@ -104,7 +114,7 @@ export default class Home extends Vue {
   }
 
   setGreetingAnimation() {
-    const CLASSNAME = "-visible";
+    const CLASSNAME = "-up";
     const target = document.getElementsByClassName("greeting-wrapper")[0];
     target.classList.add(CLASSNAME);
     setTimeout(() => {
@@ -140,26 +150,28 @@ export default class Home extends Vue {
   -webkit-background-size: cover;
   background-size: cover;
   opacity: 0.7;
-  padding: 170px 0;
+  padding: 150px 0;
 }
 .greeting-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  letter-spacing: 15px;
+  letter-spacing: 10px;
   line-height: 10.5em;
   span {
     display: block;
     font-family: cursive;
     font-size: 8em;
     color: #f3f1f5;
+    z-index: 2;
     transform: translate(0, -20%);
     transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+    text-shadow: 2px 2px #808080;
   }
 }
 
 //transition effect in Hello
-.greeting-wrapper.-visible span {
+.greeting-wrapper.-up span {
   transform: translate(0, 0);
 }
 .greeting-wrapper span:nth-child(2) {
