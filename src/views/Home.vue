@@ -50,7 +50,7 @@
             style="height: 200px; width: 100%"
             @mouseover="onMouseOverCard(card.Id)"
             @mouseleave="onMouseLeaveCard(card.Id)"
-            @click="goToLink(card.link)"
+            @click="goToLink(card)"
           >
             <div
               :class="`each-pages d-flex align-center  justify-center ${card.class}`"
@@ -136,8 +136,9 @@ export default class Home extends Vue {
     }
   }
 
-  goToLink(link: string) {
-    this.$router.push(link);
+  goToLink(item: any) {
+    this.$emit("send", item);
+    this.$router.push(item.link);
   }
 }
 </script>

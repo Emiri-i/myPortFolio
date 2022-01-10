@@ -20,9 +20,8 @@
           v-model="navBarGroup"
           active-class="header-active"
           mandatory
-          @change="goToLink()"
         >
-          <v-list-item v-for="item in navItems" :key="item.id">
+          <v-list-item v-for="item in navItems" :key="item.id" :to="item.link">
             <v-list-item-icon class="nav-item">
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-icon>
@@ -37,12 +36,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Prop, Watch } from "vue-property-decorator";
 
 @Component({
   components: {},
 })
 export default class Header extends Vue {
+  @Prop({ type: Object, default: {} })
+  readonly currentPageInfo?: any;
+
   drawer: boolean = false;
   navBarGroup: number = 0;
   linkedinURL: string = "https://www.linkedin.com/in/emiri-ishikawa-5579341b0/";
@@ -53,13 +55,19 @@ export default class Header extends Vue {
     { id: 4, title: "Projects", icon: "mdi-file-multiple", link: "/projects" },
   ];
 
+  @Watch("currentPageInfo")
+  onChangepage() {
+    console.log("this.currentPageInfo", this.currentPageInfo);
+    let targetPageInfo = this.navItems.find(
+      (item: any, index: number) => item.link === this.currentPageInfo.link
+    );
+    this.navBarGroup = targetPageInfo.id - 1;
+    console.log("navBarGroup", this.navBarGroup);
+  }
+
   goToLinkedIn() {
     const win = window.open(this.linkedinURL);
     win?.focus();
-  }
-
-  goToLink() {
-    this.$router.push(this.navItems[this.navBarGroup].link);
   }
 }
 </script>
