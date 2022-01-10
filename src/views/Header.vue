@@ -10,7 +10,12 @@
 
     <v-navigation-drawer v-model="drawer" absolute temporary right>
       <v-list nav dense>
-        <v-list-item-group v-model="navBarGroup" active-class="header-active">
+        <v-list-item-group
+          v-model="navBarGroup"
+          active-class="header-active"
+          mandatory
+          @change="goToLink()"
+        >
           <v-list-item v-for="item in navItems" :key="item.id">
             <v-list-item-icon class="nav-item">
               <v-icon>{{ item.icon }}</v-icon>
@@ -34,13 +39,13 @@ import { Component, Vue, Watch } from "vue-property-decorator";
 export default class Header extends Vue {
   // Header.vue
   drawer: boolean = false;
-  navBarGroup: number = -1;
+  navBarGroup: number = 0;
   linkedinURL: string = "https://www.linkedin.com/in/emiri-ishikawa-5579341b0/";
   navItems: any[] = [
-    { id: 1, title: "Home", icon: "mdi-home" },
-    { id: 2, title: "About Me", icon: "mdi-account" },
-    { id: 3, title: "Skills", icon: "mdi-keyboard" },
-    { id: 4, title: "Projects", icon: "mdi-file-multiple" },
+    { id: 1, title: "Home", icon: "mdi-home", link: "/" },
+    { id: 2, title: "About Me", icon: "mdi-account", link: "/aboutMe" },
+    { id: 3, title: "Skills", icon: "mdi-keyboard", link: "/skills" },
+    { id: 4, title: "Projects", icon: "mdi-file-multiple", link: "/projects" },
   ];
 
   @Watch("navBarGroup")
@@ -51,6 +56,10 @@ export default class Header extends Vue {
   goToLinkedIn() {
     const win = window.open(this.linkedinURL);
     win?.focus();
+  }
+
+  goToLink() {
+    this.$router.push(this.navItems[this.navBarGroup].link);
   }
 }
 </script>
