@@ -50,6 +50,7 @@
             style="height: 200px; width: 100%"
             @mouseover="onMouseOverCard(card.Id)"
             @mouseleave="onMouseLeaveCard(card.Id)"
+            @click="goToLink(card.link)"
           >
             <div
               :class="`each-pages d-flex align-center  justify-center ${card.class}`"
@@ -86,6 +87,7 @@ export default class Home extends Vue {
       src: "/img/woman-g8612c7b0e_640.jpg",
       class: "about-me",
       isShow: false,
+      link: "/aboutMe",
     },
     {
       Id: 2,
@@ -93,6 +95,7 @@ export default class Home extends Vue {
       src: "/img/code-g182e5b0cb_640.jpg",
       class: "skills",
       isShow: false,
+      link: "/skills",
     },
     {
       Id: 3,
@@ -100,6 +103,7 @@ export default class Home extends Vue {
       src: "/img/phone-g44ec08d6e_640.jpg",
       class: "projects",
       isShow: false,
+      link: "/projects",
     },
   ];
 
@@ -138,6 +142,10 @@ export default class Home extends Vue {
         break;
       }
     }
+  }
+
+  goToLink(link: string) {
+    this.$router.push(link);
   }
 }
 </script>
