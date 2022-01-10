@@ -31,13 +31,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Watch } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 
 @Component({
   components: {},
 })
 export default class Header extends Vue {
-  // Header.vue
   drawer: boolean = false;
   navBarGroup: number = 0;
   linkedinURL: string = "https://www.linkedin.com/in/emiri-ishikawa-5579341b0/";
@@ -47,11 +46,6 @@ export default class Header extends Vue {
     { id: 3, title: "Skills", icon: "mdi-keyboard", link: "/skills" },
     { id: 4, title: "Projects", icon: "mdi-file-multiple", link: "/projects" },
   ];
-
-  @Watch("navBarGroup")
-  test() {
-    console.log("navBarGroup", this.navBarGroup);
-  }
 
   goToLinkedIn() {
     const win = window.open(this.linkedinURL);
