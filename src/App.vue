@@ -21,4 +21,8 @@ import Header from "./views/Header.vue";
 export default class App extends Vue {}
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.v-main {
+  background-color: #f4f3f3;
+}
+</style>
