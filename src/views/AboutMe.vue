@@ -18,10 +18,15 @@
                 Hi, I'm Emiri.
                 <!-- <strong class="typing">Hi, I'm Emiri.</strong> -->
               </div>
-              <div>a Frontend-developer from Japan.</div>
+              <div>
+                <strong class="underline">a Frontend-developer</strong>
+                from Japan.
+              </div>
               <div class="mt-4">
-                I have 3 years developer experience in total, including
-                Salesforce developer and current Frotnend developer role.
+                I have
+                <strong>3 years developer experience</strong>
+                in total, including Salesforce developer and current
+                Frotnend-developer role.
               </div>
               <div class="mt-4">
                 Not only Frontend-Develoeper, but also currently in charge of UI
@@ -29,10 +34,14 @@
                 that I envision and giving them shape by coding.
               </div>
               <div class="mt-4">
-                I am motivated, open-minded, a hard worker, and have the ability
-                to work cross-functionally. Besides that, I also have experience
-                working internationally, so I can easily adjust myself to new
-                environments and love new challenges.
+                I am
+                <strong>
+                  motivated, open-minded, a hard worker, and have the ability to
+                  work cross-functionally.
+                </strong>
+                Besides that, I also have experience working internationally, so
+                I can easily adjust myself to new environments and love new
+                challenges.
               </div>
             </div>
           </v-col>
@@ -68,6 +77,9 @@ export default class AboutMe extends Vue {}
   overflow: hidden;
   border-right: 3px solid;
   animation: typing 2s steps(14), blink 1.2s infinite;
+}
+.underline {
+  background: linear-gradient(transparent 70%, #fff176 0%);
 }
 @keyframes typing {
   from {
