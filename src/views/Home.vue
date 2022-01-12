@@ -222,7 +222,7 @@ export default class Home extends Vue {
 }
 
 .about-me {
-  background: url("/img/woman-g8612c7b0e_640.jpg") no-repeat;
+  background: url("/img/woman-ge93946e13_640.jpg") no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: left top;
