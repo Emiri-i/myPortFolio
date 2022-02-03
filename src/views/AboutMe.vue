@@ -4,7 +4,7 @@
       <v-container>
         <h1
           class="text-center"
-          style="font-family: cursive; color: #bfa2db; font-size: 2.75em"
+          style="font-family: cursive; color: #bfa2db; font-size: 3.5em"
         >
           - About me -
         </h1>
