@@ -9,7 +9,7 @@
           - About me -
         </h1>
         <v-scroll-y-transition mode="in">
-          <v-row class="mt-3" v-show="isShow">
+          <v-row class="mt-5" v-show="isShow">
             <v-col cols="12" sm="3" class="d-flex align-center justify-center">
               <v-img src="../libs/F.jpg" style="max-width: 200px"></v-img>
             </v-col>
