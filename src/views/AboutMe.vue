@@ -25,7 +25,9 @@
                 </div>
                 <div class="mt-4">
                   I have
-                  <strong>3 years developer experience</strong>
+                  <strong class="underline"
+                    >3 years developer experience</strong
+                  >
                   in total, including Salesforce developer and current
                   Frotnend-developer role.
                 </div>
@@ -36,7 +38,7 @@
                 </div>
                 <div class="mt-4">
                   I am
-                  <strong>
+                  <strong class="underline">
                     motivated, open-minded, a hard worker, and have the ability
                     to work cross-functionally.
                   </strong>
