@@ -98,7 +98,7 @@ export default class AboutMe extends Vue {
 
 @keyframes blink {
   50% {
-    border-color: transparent; // チカチカする表現部分
+    border-color: transparent;
   }
 }
 </style>
