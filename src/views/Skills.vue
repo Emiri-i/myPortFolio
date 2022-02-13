@@ -4,7 +4,7 @@
       <h1 class="text-center page-title">- Skills -</h1>
       <v-card flat style="background: white" class="mt-5">
         <v-container>
-          <div class="text-center" style="font-size: 2.5em">
+          <div class="text-center mb-3" style="font-size: 2.5em">
             <span class="title-color"> coding language </span>
           </div>
           <v-row class="mt-0">
@@ -62,7 +62,7 @@
       <!-- <v-divider class="my-10"></v-divider> -->
       <v-card flat class="mt-10" style="background: white">
         <v-container>
-          <div class="text-center mb-2" style="font-size: 2.5em">
+          <div class="text-center mb-3" style="font-size: 2.5em">
             <span class="title-color"> tools </span>
           </div>
           <v-row>
