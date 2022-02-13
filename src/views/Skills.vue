@@ -7,68 +7,73 @@
       >
         - Skills -
       </h1>
-      <v-card flat style="background: white">
-        <div class="coding-lang mt-5">
+      <v-card flat style="background: white" class="mt-5">
+        <v-container>
           <div class="text-center" style="font-size: 2.5em">
-            coding language
+            <span class="title-color"> coding language </span>
           </div>
-          <v-container>
-            <v-row class="mt-0">
-              <v-col cols="4" sm="2">
-                <div class="d-flex justify-center">
-                  <v-icon x-large>mdi-vuejs</v-icon>
-                </div>
-                <div class="d-flex justify-center">Vue.js</div>
-              </v-col>
-              <v-col cols="4" sm="2">
-                <div class="d-flex justify-center">
-                  <v-icon x-large>mdi-vuetify</v-icon>
-                </div>
-                <div class="d-flex justify-center">vuetify</div>
-              </v-col>
-              <v-col cols="4" sm="2">
-                <div class="d-flex justify-center">
-                  <v-icon x-large>mdi-language-javascript</v-icon>
-                </div>
-                <div class="d-flex justify-center">Javascript</div>
-              </v-col>
-              <v-col cols="4" sm="2">
-                <div class="d-flex justify-center">
-                  <v-icon x-large>mdi-language-typescript</v-icon>
-                </div>
-                <div class="d-flex justify-center">typescript</div>
-              </v-col>
-              <v-col cols="4" sm="2">
-                <div class="d-flex justify-center">
-                  <v-icon x-large>mdi-language-html5</v-icon>
-                </div>
-                <div class="d-flex justify-center">HTML</div>
-              </v-col>
-              <v-col cols="4" sm="2">
-                <div class="d-flex justify-center">
-                  <v-icon x-large>mdi-language-css3</v-icon>
-                </div>
-                <div class="d-flex justify-center">CSS</div>
-              </v-col>
-              <v-col cols="4" sm="2">
-                <div class="d-flex justify-center">
-                  <v-icon x-large>mdi-salesforce</v-icon>
-                </div>
-                <div class="d-flex justify-center">Apex</div>
-              </v-col>
-              <v-col cols="4" sm="2">
-                <div class="d-flex justify-center">
-                  <v-icon x-large>mdi-salesforce</v-icon>
-                </div>
-                <div class="d-flex justify-center">Visualforce</div>
-              </v-col>
-            </v-row>
-          </v-container>
-        </div>
+          <v-row class="mt-0">
+            <v-col cols="4" sm="2">
+              <div class="d-flex justify-center">
+                <v-icon x-large>mdi-vuejs</v-icon>
+              </div>
+              <div class="d-flex justify-center">Vue.js</div>
+            </v-col>
+            <v-col cols="4" sm="2">
+              <div class="d-flex justify-center">
+                <v-icon x-large>mdi-vuetify</v-icon>
+              </div>
+              <div class="d-flex justify-center">vuetify</div>
+            </v-col>
+            <v-col cols="4" sm="2">
+              <div class="d-flex justify-center">
+                <v-icon x-large>mdi-language-javascript</v-icon>
+              </div>
+              <div class="d-flex justify-center">Javascript</div>
+            </v-col>
+            <v-col cols="4" sm="2">
+              <div class="d-flex justify-center">
+                <v-icon x-large>mdi-language-typescript</v-icon>
+              </div>
+              <div class="d-flex justify-center">typescript</div>
+            </v-col>
+            <v-col cols="4" sm="2">
+              <div class="d-flex justify-center">
+                <v-icon x-large>mdi-language-html5</v-icon>
+              </div>
+              <div class="d-flex justify-center">HTML</div>
+            </v-col>
+            <v-col cols="4" sm="2">
+              <div class="d-flex justify-center">
+                <v-icon x-large>mdi-language-css3</v-icon>
+              </div>
+              <div class="d-flex justify-center">CSS</div>
+            </v-col>
+            <v-col cols="4" sm="2">
+              <div class="d-flex justify-center">
+                <v-icon x-large>mdi-salesforce</v-icon>
+              </div>
+              <div class="d-flex justify-center">Apex</div>
+            </v-col>
+            <v-col cols="4" sm="2">
+              <div class="d-flex justify-center">
+                <v-icon x-large>mdi-salesforce</v-icon>
+              </div>
+              <div class="d-flex justify-center">Visualforce</div>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-card>
+      <!-- <v-divider class="my-10"></v-divider> -->
+      <v-card flat class="mt-10" style="background: white">
+        <v-container>
+          <div class="text-center" style="font-size: 2.5em">
+            <span class="title-color"> tools </span>
+          </div>
+          test
+        </v-container>
       </v-card>
       <!-- <v-divider></v-divider>
-      <div class="tools">tools</div>
-      <v-divider></v-divider>
       <div class="language">language</div> -->
     </v-container>
   </div>
@@ -92,7 +97,8 @@ export default class Skills extends Vue {
 }
 </script>
 <style lang="scss">
-.coding-lang {
+.title-color {
   color: #7f7c82;
+  border-bottom: double 5px #f0d9ff;
 }
 </style>
