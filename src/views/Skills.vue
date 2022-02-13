@@ -1,12 +1,7 @@
 <template>
   <div>
     <v-container>
-      <h1
-        class="text-center"
-        style="font-family: cursive; color: #bfa2db; font-size: 3.5em"
-      >
-        - Skills -
-      </h1>
+      <h1 class="text-center page-title">- Skills -</h1>
       <v-card flat style="background: white" class="mt-5">
         <v-container>
           <div class="text-center" style="font-size: 2.5em">

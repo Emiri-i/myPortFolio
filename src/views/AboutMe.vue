@@ -2,12 +2,7 @@
   <div class="about">
     <div>
       <v-container>
-        <h1
-          class="text-center"
-          style="font-family: cursive; color: #bfa2db; font-size: 3.5em"
-        >
-          - About me -
-        </h1>
+        <h1 class="text-center page-title">- About me -</h1>
         <v-scroll-y-transition mode="in">
           <v-row class="mt-5" v-show="isShow">
             <v-col cols="12" sm="3" class="d-flex align-center justify-center">

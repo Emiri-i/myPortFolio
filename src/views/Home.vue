@@ -239,4 +239,11 @@ export default class Home extends Vue {
   -webkit-background-size: cover;
   background-size: cover;
 }
+
+.page-title {
+  font-family: cursive;
+  color: #bfa2db;
+  font-size: 3.5em;
+  text-shadow: 4px 4px 0 #d3d3d3;
+}
 </style>
