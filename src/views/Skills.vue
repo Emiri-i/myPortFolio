@@ -62,10 +62,29 @@
       <!-- <v-divider class="my-10"></v-divider> -->
       <v-card flat class="mt-10" style="background: white">
         <v-container>
-          <div class="text-center" style="font-size: 2.5em">
+          <div class="text-center mb-2" style="font-size: 2.5em">
             <span class="title-color"> tools </span>
           </div>
-          test
+          <v-row>
+            <v-col cols="4">
+              <div class="d-flex justify-center">
+                <v-icon x-large>mdi-microsoft-visual-studio-code</v-icon>
+              </div>
+              <div class="d-flex justify-center">Visual Studio Code</div>
+            </v-col>
+            <v-col cols="4">
+              <div class="d-flex justify-center">
+                <v-icon x-large>mdi-github</v-icon>
+              </div>
+              <div class="d-flex justify-center">git</div>
+            </v-col>
+            <v-col cols="4">
+              <div class="d-flex justify-center">
+                <v-icon x-large>mdi-firebase</v-icon>
+              </div>
+              <div class="d-flex justify-center">firebase</div>
+            </v-col>
+          </v-row>
         </v-container>
       </v-card>
       <!-- <v-divider></v-divider>
