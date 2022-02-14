@@ -62,23 +62,6 @@
       <v-card flat class="mt-10" style="background: white">
         <v-container>
           <div class="text-center mb-3" style="font-size: 2.5em">
-            <span class="title-color"> languages </span>
-          </div>
-          <v-row>
-            <v-col cols="12" class="pb-0">
-              <div class="d-flex justify-center">Japanese: Native</div>
-            </v-col>
-            <v-col cols="12" class="pt-0">
-              <div class="d-flex justify-center">
-                English: Advanced/Business
-              </div>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-card>
-      <v-card flat class="mt-10" style="background: white">
-        <v-container>
-          <div class="text-center mb-3" style="font-size: 2.5em">
             <span class="title-color"> tools </span>
           </div>
           <v-row>
@@ -99,6 +82,23 @@
                 <v-icon x-large>mdi-firebase</v-icon>
               </div>
               <div class="d-flex justify-center">firebase</div>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-card>
+      <v-card flat class="mt-10" style="background: white">
+        <v-container>
+          <div class="text-center mb-3" style="font-size: 2.5em">
+            <span class="title-color"> languages </span>
+          </div>
+          <v-row>
+            <v-col cols="12" class="pb-0">
+              <div class="d-flex justify-center">Japanese: Native</div>
+            </v-col>
+            <v-col cols="12" class="pt-0">
+              <div class="d-flex justify-center">
+                English: Advanced/Business
+              </div>
             </v-col>
           </v-row>
         </v-container>
