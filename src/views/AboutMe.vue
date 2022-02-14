@@ -3,8 +3,8 @@
     <div>
       <v-container>
         <h1 class="text-center page-title">- About me -</h1>
-        <v-scroll-y-transition mode="in">
-          <v-row class="mt-5" v-show="isShow">
+        <v-expand-transition appear>
+          <v-row class="mt-5" v-if="isShow">
             <v-col cols="12" sm="3" class="d-flex align-center justify-center">
               <v-img src="../libs/F.jpg" style="max-width: 200px"></v-img>
             </v-col>
@@ -44,7 +44,7 @@
               </div>
             </v-col>
           </v-row>
-        </v-scroll-y-transition>
+        </v-expand-transition>
       </v-container>
     </div>
   </div>
@@ -97,5 +97,8 @@ export default class AboutMe extends Vue {
   50% {
     border-color: transparent;
   }
+}
+.expand-transition-enter {
+  opacity: 0;
 }
 </style>
